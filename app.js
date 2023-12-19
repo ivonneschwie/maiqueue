@@ -50,10 +50,13 @@ function renderPlayers (docu){
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   
-  await addDoc(collection(db, "sm-dagupan"), {
-    playername: form.playername.value,
-    time: Timestamp.now()
-  })
+  const name = form.playername.value;
+  if (name.trim().length != 0){
+    await addDoc(collection(db, "sm-dagupan"), {
+      playername: form.playername.value,
+      time: Timestamp.now()
+    })
+  }
 
   form.playername.value = '';
   window.location.reload(true);
