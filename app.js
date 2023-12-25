@@ -37,8 +37,8 @@ function renderPlayers (docu){
 
   time_border.setAttribute('id', 'time_border');
  
-  diff.src = "/images/diff_master.png"; 
-  time_border.src = "images/time.png"
+  diff.src = "https://github.com/ivonneschwie/maiqueue/blob/main/images/diff_master.png"; 
+  time_border.src = "https://github.com/ivonneschwie/maiqueue/blob/main/images/time.png"
 
   li.appendChild(playername);
   li.appendChild(timestamp);
