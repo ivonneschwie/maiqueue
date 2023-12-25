@@ -26,15 +26,25 @@ function renderPlayers (docu){
   let playername = document.createElement('span');
   let timestamp = document.createElement('span');
   let cross = document.createElement('div');
+  let diff = document.createElement("img"); 
+  let time_border = document.createElement("img"); 
+  
 
   li.setAttribute('data-id', docu.id);
   playername.textContent = docu.data().playername;
   timestamp.textContent = docu.data().time.toDate().toLocaleTimeString('en-GB').substring(0, 8);
-  cross.textContent = 'x';
+  cross.textContent = 'CLEAR!';
+
+  time_border.setAttribute('id', 'time_border');
+ 
+  diff.src = "/images/diff_master.png"; 
+  time_border.src = "images/time.png"
 
   li.appendChild(playername);
   li.appendChild(timestamp);
   li.appendChild(cross);
+  li.appendChild(diff);
+  li.appendChild(time_border);
 
   playerList.appendChild(li);
 
